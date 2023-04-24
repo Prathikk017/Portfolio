@@ -35,9 +35,9 @@ const Main = () => {
             />
           </h2>
           <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-            <BsGithub  className='cursor-pointer' size={40}/>
-            <FaCodepen  className='cursor-pointer' size={40}/>
-            <FaLinkedin  className='cursor-pointer' size={40}/>
+           <a href='https://github.com/Prathikk017?tab=repositories'><BsGithub  className='cursor-pointer' size={40}/></a>
+           <a href='https://codepen.io/your-work/'><FaCodepen  className='cursor-pointer' size={40}/></a>
+           <a href='https://www.linkedin.com/in/prathik-k-b7a11921b'><FaLinkedin  className='cursor-pointer' size={40}/></a> 
           </div>
         </div>
       </div>
