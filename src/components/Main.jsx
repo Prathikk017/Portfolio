@@ -4,13 +4,14 @@ import {
   FaCodepen,
   FaLinkedin,
 } from 'react-icons/fa';
+import backgroundImg from '../assets/background.png';
 import {BsGithub} from 'react-icons/bs'
 const Main = () => {
   return (
     <div id='main'>
       <img
         className='w-full h-screen object-cover object-left scale-x-[1]'
-        src='https://images.unsplash.com/photo-1463385676620-a37609440d4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'
+        src={backgroundImg}
       />
       <div className='w-full h-screen absolute top-0 left-0 bg-white/50'>
         <div className='max-width-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center'>
@@ -34,9 +35,8 @@ const Main = () => {
               }}
             />
           </h2>
-          <div className='flex justify-between pt-6 max-w-[200px] w-full'>
+          <div className='flex justify-center gap-3 pt-6 max-w-[200px] w-full'>
            <a href='https://github.com/Prathikk017?tab=repositories'><BsGithub  className='cursor-pointer' size={40}/></a>
-           <a href='https://codepen.io/your-work/'><FaCodepen  className='cursor-pointer' size={40}/></a>
            <a href='https://www.linkedin.com/in/prathik-k-b7a11921b'><FaLinkedin  className='cursor-pointer' size={40}/></a> 
           </div>
         </div>
