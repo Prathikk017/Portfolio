@@ -1,5 +1,6 @@
 import React from 'react'
 import Workitem from './Workitem'
+import Skills from './Skills'
 const data = [
     {
         year: 2023,
@@ -12,11 +13,15 @@ const data = [
 
 const Experience = () => {
   return (
-   <div id='work' className='max-w-[1040px] m-auto md:pl-19 h-full p-4 py-16'>
+   <div id='work' className='max-w-[1040px] m-auto md:pl-19 h-full p-4 py-4'>
+    <div className='flex-row mb-2'>
+      <Skills/>
     <h1 className='text-4xl font-bold text-center text-[#001b5e] pb-4'>Experience</h1>
    {data.map((item, index) => (
     <Workitem key={index} year={item.year} title={item.title} duration={item.duration} details={item.details}/>
    ))}
+    </div>
+    
    </div>
   )
 }

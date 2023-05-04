@@ -11,7 +11,7 @@ import Skillitem from './Skillitem';
 
 const Skills = () => {
   return (
-    <div id='work' className='max-w-[1040px]  m-auto md:pl-19 p-4 py-4 '>
+    <div id='work' className='max-w-[1040px]  m-auto md:pl-19 p-4 py-4  '>
       <h1 className='text-4xl font-bold text-center text-[#001b5e] py-10'>
         Skills
       </h1>
@@ -29,4 +29,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Skills;

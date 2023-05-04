@@ -6,7 +6,7 @@ import netflixImg from '../assets/Netflix.png';
 import sudokuImg from '../assets/Sudoku.png';
 import lekpayImg from '../assets/lekpay.png';
 import Projectitem from './Projectitem';
-
+import { projectList } from '../Helpers/ProjectList';
 
 const Projects = () => {
   return (
@@ -14,13 +14,12 @@ const Projects = () => {
       <h1 className='text-4xl font-bold text-center text-[#001b5e] py-8'>
         Projects
       </h1>
-      <div className='grid sm:grid-cols-3 gap-10'>
-        <Projectitem img={billManagerImg} title='Bill Manager' />
-        <Projectitem img={galleryAppImg} title='Gallery App' />
-        <Projectitem img={googleDocsImg} title='Google Docs' />
-        <Projectitem img={netflixImg} title='Netflix App' />
-        <Projectitem img={sudokuImg} title='Sudoku App' />
-        <Projectitem img={lekpayImg} title='lekpay App' />
+      <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-10'>
+        {projectList.map((project, idx)=>{
+        return(
+            <Projectitem  id={idx} image={project.image} title={project.title}  />
+        );
+        })}
       </div>
     </div>
   );
