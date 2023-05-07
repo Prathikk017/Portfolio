@@ -37,7 +37,7 @@ const Sidenav = () => {
           ''
         )}
         <div className='md:block hidden fixed bottom-4 z-20 '>
-          <div className='flex flex-auto lg:ml-[38rem] md:ml-[18rem] bg-gray-100/60 shadow-md  shadow-gray-300 rounded-full'>
+          <div className='flex flex-auto lg:ml-[40rem] md:ml-[18rem] bg-gray-100/60 shadow-md  shadow-gray-300 rounded-full'>
             <Link to="/" className='rounded-full shadow-lg bg-gray-100  m-3 p-3   cursor-pointer hover:scale-110 hover:bg-gray-50 ease-in duration-200'>
               <AiOutlineHome size={20} className='hover:text-yellow'/>
             </Link>

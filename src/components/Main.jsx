@@ -20,7 +20,7 @@ const Main = () => {
             I'm a
             <TypeAnimation
               sequence={[
-                'Full-Stack </> Developer', // Types 'One'
+                'Frontend </> Developer', // Types 'One'
                 1000, // Waits 1s
                 'and Designer.', // Deletes 'One' and types 'Two'
                 1000, // Waits 2s
