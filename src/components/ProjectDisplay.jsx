@@ -20,30 +20,33 @@ const ProjectDisplay = () => {
   return (
     <div className='max-w-[1040px] m-auto md:pl-19 h-screen p-4 py-4 '>
       <h1 className='text-4xl text-center items-center justify-center font-bold py-4 text-[#001b5e]'>
-        
         {project.title}
       </h1>
       {/* <button className='py-3 px-6 bg-[#001b5e] text-white rounded-xl font-semibold '>Back</button> */}
-      <div className='grid lg:grid-cols-2 flex-col group'>
-        <div className='lg:w-[30rem] sm:[25rem] lg:h-[300px] my-14 realtive'>
+      <div className='grid lg:grid-cols-2 flex-col group mx-auto'>
+      <div className='lg:w-[30rem] md:w-[35rem] mx-auto  lg:h-[300px] my-14 relative'>
+        <div className='relative'>
           <img
-            className='object-fit lg:w-full lg:h-full md:h-[35vh] md:m-auto mt-10  mr-4  shadow-lg shadow-gray-400 border border-gray-200 rounded-lg '
+            className='object-fit lg:w-full lg:h-[220px] md:h-[35vh] md:m-auto mt-10 mr-4 shadow-lg shadow-gray-400 border border-gray-200 rounded-lg'
             src={project.img[currentIndex]}
           />
           {/* Left Arrow */}
           <div
-            className='absolute top-[40%] -translate-x-0 translate-y-[-50%] lg:left-[17%] lg:ml-3 text-2xl rounded-full p-2 group-hover:bg-gray-300/80 text-white cursor-pointer'
+            className='absolute sm:top-[44%] top-[40%]  -translate-y-1/2 left-0 ml-6 text-2xl rounded-full p-2 group-hover:bg-gray-300/80 text-white cursor-pointer'
+            style={{ transform: 'translate(-50%)' }}
             onClick={prevSlide}
           >
             <BsChevronCompactLeft size={30} />
           </div>
           {/* Right Arrow */}
           <div
-            className='absolute top-[40%] -translate-x-0 translate-y-[-50%] lg:left-[45%] lg:ml-0 text-2xl rounded-full p-2 group-hover:bg-gray-300/80 text-white cursor-pointer'
+            className='absolute sm:top-[44%] top-[40%] -translate-y-1/2 right-0 mr-6 text-2xl rounded-full p-2 group-hover:bg-gray-300/80 text-white cursor-pointer'
+            style={{ transform: 'translate(50%)' }}
             onClick={nextSlide}
           >
             <BsChevronCompactRight size={30} />
           </div>
+        </div>
         </div>
 
         <div className='flex flex-col items-start'>
@@ -54,12 +57,16 @@ const ProjectDisplay = () => {
             <span className='justify-start'>{project.desc}</span>
           </p>
           <div className='flex-row items-center py-2 my-2'>
-          <a href={`${project.git}`}><button className='text-center py-2 px-4 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-md border border-gray-500 ml-20 hover:scale-110 duration-500  shadow-sm shadow-gray-600'>
-              Code
-            </button></a>
-           <a href={`${project.demo}`}><button className='text-center py-2 px-4 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-md border border-gray-500 ml-10 hover:scale-110 duration-500 shadow-sm shadow-gray-600'>
-              Demo
-            </button></a> 
+            <a href={`${project.git}`}>
+              <button className='text-center py-2 px-4 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-md border border-gray-500 ml-20 hover:scale-110 duration-500  shadow-sm shadow-gray-600'>
+                Code
+              </button>
+            </a>
+            <a href={`${project.demo}`}>
+              <button className='text-center py-2 px-4 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-md border border-gray-500 ml-10 hover:scale-110 duration-500 shadow-sm shadow-gray-600'>
+                Demo
+              </button>
+            </a>
           </div>
         </div>
       </div>
