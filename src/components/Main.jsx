@@ -36,8 +36,8 @@ const Main = () => {
             />
           </h2>
           <div className='flex justify-center gap-3 pt-6 max-w-[200px] w-full'>
-           <a href='https://github.com/Prathikk017?tab=repositories'><BsGithub  className='cursor-pointer' size={40}/></a>
-           <a href='https://www.linkedin.com/in/prathik-k-b7a11921b'><FaLinkedin  className='cursor-pointer' size={40}/></a> 
+           <a href='https://github.com/Prathikk017'><BsGithub  className='cursor-pointer' size={40}/></a>
+           <a href='https://www.linkedin.com/in/prathik-k-p1905k/'><FaLinkedin  className='cursor-pointer' size={40}/></a> 
           </div>
         </div>
       </div>

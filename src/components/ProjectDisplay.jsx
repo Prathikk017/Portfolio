@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { projectList } from '../Helpers/ProjectList';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 const ProjectDisplay = () => {
   const { id } = useParams();
+  const history = useNavigate();
   const project = projectList[id];
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
@@ -17,17 +18,21 @@ const ProjectDisplay = () => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
+  const handleClick = () =>{
+    history('/projects')
+  }
   return (
     <div className='max-w-[1040px] m-auto md:pl-19 h-screen p-4 py-4 '>
       <h1 className='text-4xl text-center items-center justify-center font-bold py-4 text-[#001b5e]'>
         {project.title}
       </h1>
-      {/* <button className='py-3 px-6 bg-[#001b5e] text-white rounded-xl font-semibold '>Back</button> */}
+      <button className='py-2 px-4 bg-[#001b5e] text-white text-center  rounded-xl font-semibold ' onClick={handleClick}>Back</button>
       <div className='grid lg:grid-cols-2 flex-col group mx-auto'>
       <div className='lg:w-[30rem] md:w-[35rem] mx-auto  lg:h-[300px] my-14 relative'>
         <div className='relative'>
           <img
-            className='object-fit lg:w-full lg:h-[220px] md:h-[35vh] md:m-auto mt-10 mr-4 shadow-lg shadow-gray-400 border border-gray-200 rounded-lg'
+            className='object-fit lg:w-full lg:h-[220px] md:h-[35vh] md:m-auto mt-6 mr-4 shadow-lg shadow-gray-400 border border-gray-200 rounded-lg'
             src={project.img[currentIndex]}
           />
           {/* Left Arrow */}
@@ -49,9 +54,9 @@ const ProjectDisplay = () => {
         </div>
         </div>
 
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-start ml-4'>
           <p className='flex flex-col items-start'>
-            <span className='text-2xl font-medium py-2 mt-10 text-[#001b5e]'>
+            <span className='text-2xl font-medium py-2 mt-6 text-[#001b5e]'>
               Description:{' '}
             </span>
             <span className='justify-start'>{project.desc}</span>

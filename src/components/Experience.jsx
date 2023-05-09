@@ -5,8 +5,8 @@ const data = [
     {
         year: 2023,
         title: 'Powaha Infotech PVT LTD',
-        duration:'6 months',
-        details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        duration:'5 months',
+        details: "A user friendly website using OVI hosting panel is designed and completely developed. STS offers contact-less payment methods for public transport, allows IT support to track, manage, speed up and deal effectively with incidents. Front-end development is done using React.JS and Tailwind.CSS for styling, which provides a better user interface. MySQL, Node.JS and Express.JS are utilized for Back-end development, with 100% client satisfaction. Fixed bugs from the previous versions of the website and implemented enhancements and better functionality that increased the efficiency by 30%. Working in a team of 4 for the project, designed and implemented both the Front-end and Back-end of a website used by company admins and operators."
     }, 
 ]
 
